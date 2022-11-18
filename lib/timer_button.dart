@@ -6,9 +6,6 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 
 enum ButtonType {
-  RaisedButton,
-  FlatButton,
-  OutlineButton,
   ElevatedButton,
   TextButton,
   OutlinedButton
@@ -142,25 +139,6 @@ class _TimerButtonState extends State<TimerButton> {
   @override
   Widget build(BuildContext context) {
     switch (widget.buttonType) {
-      //RaisedButton is deprecated, use ElevatedButton instead
-      case ButtonType.RaisedButton:
-        //TODO: (Ajay) Remove deprecated members
-        // ignore: deprecated_member_use
-        return RaisedButton(
-          disabledColor: widget.disabledColor,
-          color: timeUpFlag ? widget.color : widget.disabledColor,
-          onPressed: _onPressed,
-          child: _buildChild(),
-        );
-      //FlatButton is deprecated, use TextButton instead
-      case ButtonType.FlatButton:
-        // ignore: deprecated_member_use
-        return FlatButton(
-          color: timeUpFlag ? widget.color : widget.disabledColor,
-          disabledColor: widget.disabledColor,
-          onPressed: _onPressed,
-          child: _buildChild(),
-        );
       case ButtonType.ElevatedButton:
         return ElevatedButton(
             onPressed: _onPressed,
