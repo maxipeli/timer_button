@@ -61,7 +61,7 @@ class TimerButton extends StatefulWidget {
     this.color = Colors.blue,
     this.resetTimerOnPressed = true,
     this.disabledColor = Colors.grey,
-    this.buttonType = ButtonType.RaisedButton,
+    this.buttonType = ButtonType.ElevatedButton,
     this.activeTextStyle,
     this.disabledTextStyle = const TextStyle(color: Colors.black45),
   }) : super(key: key);
