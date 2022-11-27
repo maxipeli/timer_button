@@ -98,8 +98,7 @@ class _TimerButtonState extends State<TimerButton> {
   Widget _buildChild() {
     TextStyle? activeTextStyle;
     if (widget.activeTextStyle == null) {
-      if (widget.buttonType == ButtonType.OutlinedButton ||
-          widget.buttonType == ButtonType.OutlineButton) {
+      if (widget.buttonType == ButtonType.OutlinedButton) {
         activeTextStyle = TextStyle(color: widget.color);
       } else {
         activeTextStyle = TextStyle(color: Colors.white);
